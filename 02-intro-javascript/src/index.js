@@ -1,28 +1,13 @@
-const personajes = ["Goku", "Vegeta", "Trunks"];
-const [, , p3] = personajes;
-console.log(p3);
+import { getHeroeById } from "./bases/08-imp-exp";
 
-const retornaArreglo = () => {
-  return ["ABC", 123];
-};
+const promesa = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    // Tarea
+    const heroe = getHeroeById(2);
+    console.log(heroe);
+  }, 2000);
+});
 
-const [letras, numeros] = retornaArreglo();
-
-console.log(letras);
-console.log(numeros);
-
-// Tarea
-
-const useState = (valor) => {
-  return [
-    valor,
-    () => {
-      console.log("Hola Mundo");
-    },
-  ];
-};
-
-const [nombre, setNombre] = useState("Goku");
-
-console.log(nombre);
-setNombre();
+promesa.then(() => {
+  console.log("Then de la promesa");
+});
