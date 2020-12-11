@@ -1,18 +1,25 @@
 // FC
 
-import React from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 // import React, {Fragment} from 'react';
 
-const PrimeraApp = ({saludo = 'Hola Mundo'}) => {
-  
-
+const PrimeraApp = ({ saludo, subtitulo }) => {
   return (
-		<>
+    <>
       <h1>{saludo}</h1>
-			{/* <pre>{JSON.stringify(saludo, null, 3)}</pre> */}
-			<p>Mi Primera aplicacion</p>
-		</>
-	)
-}
+      {/* <pre>{JSON.stringify(saludo, null, 3)}</pre> */}
+      <p>{subtitulo}</p>
+    </>
+  );
+};
+
+PrimeraApp.propTypes = {
+  saludo: PropTypes.string.isRequired,
+};
+
+PrimeraApp.defaultProps = {
+  subtitulo: "Soy un Subtitulo",
+};
 
 export default PrimeraApp;
