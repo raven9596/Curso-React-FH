@@ -1,10 +1,18 @@
 
-test('debe de ser true', () => {
+describe('Pruebas en el archivo demo.test.js', () => {
 
-  const isActive = true;
-
-  if ( isActive ) {
-      throw new Error('No esta activo');
-  }
+  test('deben de ser iguales los string', () => {
   
+    // 1. inicialización
+    const mensaje = 'Hola Mundo';
+  
+    // 2. Estímulo
+    const mensaje2 = `Hola Mundo`;
+  
+    // 3. Observar el comportamiento
+    expect(mensaje).toBe(mensaje2); // ===
+   
+    
+  });
 });
+
