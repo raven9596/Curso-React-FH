@@ -26,9 +26,9 @@ const CounterApp = ({ value = 10 }) => {
 		<>
 			<h1>CounterApp</h1>
 			<h2>{counter}</h2>
-			<button onClick={handleSubtract}>-1</button>
-			<button onClick={handelReset}>Reset</button>
 			<button onClick={handleAdd}>+1</button>
+			<button onClick={handelReset}>Reset</button>
+			<button onClick={handleSubtract}>-1</button>
 		</>
 	)
 };
