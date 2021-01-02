@@ -21,7 +21,7 @@ const GifExpertApp = () => {
 
 			<ol>
 				{categories.map((category, i) => (
-					<GifGrid key={category} category={category} />
+					<GifGrid key={category}  category={category} />
 				))}
 			</ol>
 		</Fragment>
