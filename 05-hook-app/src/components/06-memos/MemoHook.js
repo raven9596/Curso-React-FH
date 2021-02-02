@@ -6,8 +6,8 @@ import '../02-useEffect/effect.css';
 export const MemoHook = () => {
 
 	const {counter, increment} = useCounter(1000);
-  const [show, setShow] = useState(true);
-  const memoProcesoPesado = useMemo(() => procesoPesado( counter ), [ counter ]);
+  const [show, setShow]      = useState(true);
+  const memoProcesoPesado    = useMemo(() => procesoPesado( counter ), [ counter ]);
   
 	return (
 		<div>
